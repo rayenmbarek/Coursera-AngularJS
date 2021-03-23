@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html ng-app = "LunchCheck">
   <head>
-    <meta charset="utf-8">
-    <title>Hello Coursera</title>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+    <script src = "angular.min.js"></script>
+    <script src = "app.js"></script>
+
   </head>
-  <body>
-    <<h1>Hello Courrsera Students!</h1>
-  </body>
+<body ng-controller= "LunchCheckController" >
+   <div>
+     <h1>Lunch Checker</h1>
+
+         <div>
+             <input type="text" ng-model="lunch">
+
+         </div>
+         <div >
+             <button ng-Click ="Checking()">Check If Too Much</button>
+             <div ng-if="words ==0 ">Please enter data first </div>
+             <div ng-if="words<4 && words>0"> Enjoy! </div>
+             <div ng-if="words>3">Too much!</div>
+             </div>
+          </div>
+
+
+           <!-- Your message can go here. -->
+
+
+</body>
 </html>
